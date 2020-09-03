@@ -26,7 +26,7 @@ class ViewController: UIViewController {
     var activePlayer = 1
     var x = "X"
     var y = "O"
-    var whichButton = UIButton.self
+    
     var index: Int = 0
     
     override func viewDidLoad() {
@@ -166,7 +166,7 @@ class ViewController: UIViewController {
     
     @IBAction func resetGameBoard(_ sender: UIButton) {
         
-        activePlayer = 0
+        activePlayer = 1
         
         button1.isEnabled = true
         button2.isEnabled = true
