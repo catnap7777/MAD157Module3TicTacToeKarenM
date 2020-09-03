@@ -27,6 +27,8 @@ class ViewController: UIViewController {
     var x = "X"
     var y = "O"
     
+    var winArray: [String] = ["N","N","N","N","N","N","N","N","N"]
+    
     var index: Int = 0
     
     override func viewDidLoad() {
@@ -47,11 +49,13 @@ class ViewController: UIViewController {
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 0
+                    winArray[0] = "X"
                 } else {
                     button1.setTitle("O", for: UIControl.State.normal)
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 1
+                    winArray[0] = "O"
                 }
             case 2:
             //button2 was pressed
@@ -60,11 +64,13 @@ class ViewController: UIViewController {
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 0
+                    winArray[1] = "X"
                 } else {
                     button2.setTitle("O", for: UIControl.State.normal)
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 1
+                    winArray[1] = "O"
                 }
             case 3:
             //button3 was pressed
@@ -73,11 +79,13 @@ class ViewController: UIViewController {
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 0
+                    winArray[2] = "X"
                 } else {
                     button3.setTitle("O", for: UIControl.State.normal)
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 1
+                    winArray[2] = "O"
                 }
             case 4:
             //button4 was pressed
@@ -86,11 +94,13 @@ class ViewController: UIViewController {
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 0
+                    winArray[3] = "X"
                 } else {
                     button4.setTitle("O", for: UIControl.State.normal)
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 1
+                    winArray[3] = "O"
                 }
             case 5:
             //button5 was pressed
@@ -99,11 +109,13 @@ class ViewController: UIViewController {
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 0
+                    winArray[4] = "X"
                 } else {
                     button5.setTitle("O", for: UIControl.State.normal)
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 1
+                    winArray[4] = "O"
                 }
             case 6:
             //button6 was pressed
@@ -112,11 +124,13 @@ class ViewController: UIViewController {
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 0
+                    winArray[5] = "X"
                 } else {
                     button6.setTitle("O", for: UIControl.State.normal)
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 1
+                    winArray[5] = "O"
                 }
             case 7:
             //button7 was pressed
@@ -125,11 +139,13 @@ class ViewController: UIViewController {
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 0
+                    winArray[6] = "X"
                 } else {
                     button7.setTitle("O", for: UIControl.State.normal)
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 1
+                    winArray[6] = "O"
                 }
             case 8:
             //button8 was pressed
@@ -138,11 +154,13 @@ class ViewController: UIViewController {
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 0
+                    winArray[7] = "X"
                 } else {
                     button8.setTitle("O", for: UIControl.State.normal)
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 1
+                    winArray[7] = "O"
                 }
             case 9:
             //button9 was pressed
@@ -151,11 +169,13 @@ class ViewController: UIViewController {
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 0
+                    winArray[8] = "X"
                 } else {
                     button9.setTitle("O", for: UIControl.State.normal)
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 1
+                    winArray[8] = "O"
                 }
             default:
             // no button pressed
@@ -167,6 +187,17 @@ class ViewController: UIViewController {
     @IBAction func resetGameBoard(_ sender: UIButton) {
         
         activePlayer = 1
+        
+        for (k,v) in winArray.enumerated() {
+            print("index \(k): value \(v)")
+        }
+        
+        winArray.removeAll()
+       
+        for i in 1...9 {
+            print(i)
+            winArray.append("N")
+        }
         
         button1.isEnabled = true
         button2.isEnabled = true
