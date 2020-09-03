@@ -122,14 +122,30 @@
                                     <constraint firstAttribute="width" constant="140" id="Mlo-Ny-i5y"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpW-VB-afE">
+                                <rect key="frame" x="151" y="455" width="113" height="41"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="113" id="deX-j1-aYJ"/>
+                                    <constraint firstAttribute="height" constant="41" id="qK7-cA-vYz"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="resetGameBoard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yJ3-Ry-ayv"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="fpW-VB-afE" firstAttribute="top" secondItem="gw3-Gv-xBW" secondAttribute="bottom" constant="32" id="3hG-qA-PxT"/>
                             <constraint firstItem="Dhd-8C-Hrg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="60" id="CSx-ZC-v8U"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dhd-8C-Hrg" secondAttribute="trailing" constant="59" id="Gww-3v-Rwq"/>
                             <constraint firstItem="gw3-Gv-xBW" firstAttribute="top" secondItem="Dhd-8C-Hrg" secondAttribute="bottom" constant="45" id="I76-ZZ-3zp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gw3-Gv-xBW" secondAttribute="trailing" constant="137" id="WL5-KO-nyL"/>
+                            <constraint firstItem="fpW-VB-afE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="151" id="ZOX-cu-5ya"/>
                             <constraint firstItem="gw3-Gv-xBW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="137" id="dBV-e0-S0j"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fpW-VB-afE" secondAttribute="trailing" constant="150" id="dl3-Am-59V"/>
                             <constraint firstItem="Dhd-8C-Hrg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="117" id="s6b-Up-cTF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -145,6 +161,7 @@
                         <outlet property="button8" destination="9uZ-RD-ioQ" id="QsT-OG-jZf"/>
                         <outlet property="button9" destination="wXR-R1-cSG" id="Uwb-e3-VFD"/>
                         <outlet property="myView" destination="8bC-Xf-vdC" id="z09-ZE-ILd"/>
+                        <outlet property="resetButton" destination="fpW-VB-afE" id="WVc-Ym-MfW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

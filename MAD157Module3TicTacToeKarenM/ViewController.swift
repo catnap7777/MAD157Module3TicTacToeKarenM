@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     @IBOutlet var button9: UIButton!
     
     @IBOutlet var myView: UIView!
+    @IBOutlet var resetButton: UIButton!
     
     var activePlayer = 1
     var x = "X"
@@ -160,8 +161,42 @@ class ViewController: UIViewController {
             // no button pressed
             print("sorry, no button pressed")
         }
+    }
+    
+    
+    @IBAction func resetGameBoard(_ sender: UIButton) {
         
+        activePlayer = 0
         
+        button1.isEnabled = true
+        button2.isEnabled = true
+        button3.isEnabled = true
+        button4.isEnabled = true
+        button5.isEnabled = true
+        button6.isEnabled = true
+        button7.isEnabled = true
+        button8.isEnabled = true
+        button9.isEnabled = true
+        
+        button1.backgroundColor = UIColor.lightGray
+        button2.backgroundColor = UIColor.lightGray
+        button3.backgroundColor = UIColor.lightGray
+        button4.backgroundColor = UIColor.lightGray
+        button5.backgroundColor = UIColor.lightGray
+        button6.backgroundColor = UIColor.lightGray
+        button7.backgroundColor = UIColor.lightGray
+        button8.backgroundColor = UIColor.lightGray
+        button9.backgroundColor = UIColor.lightGray
+        
+        button1.setTitle("", for: UIControl.State.normal)
+        button2.setTitle("", for: UIControl.State.normal)
+        button3.setTitle("", for: UIControl.State.normal)
+        button4.setTitle("", for: UIControl.State.normal)
+        button5.setTitle("", for: UIControl.State.normal)
+        button6.setTitle("", for: UIControl.State.normal)
+        button7.setTitle("", for: UIControl.State.normal)
+        button8.setTitle("", for: UIControl.State.normal)
+        button9.setTitle("", for: UIControl.State.normal)
         
         
     }
