@@ -13,6 +13,7 @@
 		3A57AD1C2500995000CCE1E5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A57AD1A2500995000CCE1E5 /* Main.storyboard */; };
 		3A57AD1E2500995100CCE1E5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A57AD1D2500995100CCE1E5 /* Assets.xcassets */; };
 		3A57AD212500995100CCE1E5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A57AD1F2500995100CCE1E5 /* LaunchScreen.storyboard */; };
+		3A6B8B022501A407003CCF44 /* confetti.png in Resources */ = {isa = PBXBuildFile; fileRef = 3A6B8B012501A407003CCF44 /* confetti.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		3A57AD1D2500995100CCE1E5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A57AD202500995100CCE1E5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A57AD222500995100CCE1E5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6B8B012501A407003CCF44 /* confetti.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = confetti.png; path = ../../confetti.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 				3A57AD182500995000CCE1E5 /* ViewController.swift */,
 				3A57AD1A2500995000CCE1E5 /* Main.storyboard */,
 				3A57AD1D2500995100CCE1E5 /* Assets.xcassets */,
+				3A6B8B012501A407003CCF44 /* confetti.png */,
 				3A57AD1F2500995100CCE1E5 /* LaunchScreen.storyboard */,
 				3A57AD222500995100CCE1E5 /* Info.plist */,
 			);
@@ -128,6 +131,7 @@
 				3A57AD212500995100CCE1E5 /* LaunchScreen.storyboard in Resources */,
 				3A57AD1E2500995100CCE1E5 /* Assets.xcassets in Resources */,
 				3A57AD1C2500995000CCE1E5 /* Main.storyboard in Resources */,
+				3A6B8B022501A407003CCF44 /* confetti.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

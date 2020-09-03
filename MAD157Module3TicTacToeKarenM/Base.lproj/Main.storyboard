@@ -144,6 +144,7 @@
                         <outlet property="button7" destination="3PH-fx-2Sd" id="al4-Dx-PUO"/>
                         <outlet property="button8" destination="9uZ-RD-ioQ" id="QsT-OG-jZf"/>
                         <outlet property="button9" destination="wXR-R1-cSG" id="Uwb-e3-VFD"/>
+                        <outlet property="myView" destination="8bC-Xf-vdC" id="z09-ZE-ILd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

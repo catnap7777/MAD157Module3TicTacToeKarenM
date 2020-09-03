@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     @IBOutlet var button8: UIButton!
     @IBOutlet var button9: UIButton!
     
+    @IBOutlet var myView: UIView!
+    
     var activePlayer = 1
     var x = "X"
     var y = "O"
@@ -29,6 +31,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "confetti.png")!)
     }
 
     @IBAction func buttonClicked(_ sender: UIButton) {
