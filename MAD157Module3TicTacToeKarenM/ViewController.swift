@@ -148,7 +148,7 @@ class ViewController: UIViewController {
                     button9.isEnabled = false
                     activePlayer = 0
                 } else {
-                    button9.setTitle("X", for: UIControl.State.normal)
+                    button9.setTitle("O", for: UIControl.State.normal)
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 1
