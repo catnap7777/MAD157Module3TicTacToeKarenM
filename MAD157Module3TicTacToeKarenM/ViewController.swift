@@ -27,19 +27,10 @@ class ViewController: UIViewController {
     var x = "X"
     var y = "O"
     
-    var winArray: [String] = ["N","N","N","N","N","N","N","N","N"]
+    var winArray: [Int] = [1,2,3,4,5,6,7,8,9]
     
     var index: Int = 0
-    
-    var across1: String = "W"
-    var across2: String = "W"
-    var across3: String = "W"
-    var down1: String = "W"
-    var down2: String = "W"
-    var down3: String = "W"
-    var diagFromLeftCorner: String = "W"
-    var diagFromRightCorner: String = "W"
-    
+ 
     var winnerFlag: Bool = false
    
     override func viewDidLoad() {
@@ -60,13 +51,13 @@ class ViewController: UIViewController {
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 0
-                    winArray[0] = "X"
+                    winArray[0] = 888
                 } else {
                     button1.setTitle("O", for: UIControl.State.normal)
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 1
-                    winArray[0] = "O"
+                    winArray[0] = 999
                 }
             case 2:
             //button2 was pressed
@@ -75,13 +66,13 @@ class ViewController: UIViewController {
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 0
-                    winArray[1] = "X"
+                    winArray[1] = 888
                 } else {
                     button2.setTitle("O", for: UIControl.State.normal)
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 1
-                    winArray[1] = "O"
+                    winArray[1] = 999
                 }
             case 3:
             //button3 was pressed
@@ -90,13 +81,13 @@ class ViewController: UIViewController {
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 0
-                    winArray[2] = "X"
+                    winArray[2] = 888
                 } else {
                     button3.setTitle("O", for: UIControl.State.normal)
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 1
-                    winArray[2] = "O"
+                    winArray[2] = 999
                 }
             case 4:
             //button4 was pressed
@@ -105,13 +96,13 @@ class ViewController: UIViewController {
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 0
-                    winArray[3] = "X"
+                    winArray[3] = 888
                 } else {
                     button4.setTitle("O", for: UIControl.State.normal)
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 1
-                    winArray[3] = "O"
+                    winArray[3] = 999
                 }
             case 5:
             //button5 was pressed
@@ -120,13 +111,13 @@ class ViewController: UIViewController {
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 0
-                    winArray[4] = "X"
+                    winArray[4] = 888
                 } else {
                     button5.setTitle("O", for: UIControl.State.normal)
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 1
-                    winArray[4] = "O"
+                    winArray[4] = 999
                 }
             case 6:
             //button6 was pressed
@@ -135,13 +126,13 @@ class ViewController: UIViewController {
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 0
-                    winArray[5] = "X"
+                    winArray[5] = 888
                 } else {
                     button6.setTitle("O", for: UIControl.State.normal)
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 1
-                    winArray[5] = "O"
+                    winArray[5] = 999
                 }
             case 7:
             //button7 was pressed
@@ -150,13 +141,13 @@ class ViewController: UIViewController {
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 0
-                    winArray[6] = "X"
+                    winArray[6] = 888
                 } else {
                     button7.setTitle("O", for: UIControl.State.normal)
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 1
-                    winArray[6] = "O"
+                    winArray[6] = 999
                 }
             case 8:
             //button8 was pressed
@@ -165,13 +156,13 @@ class ViewController: UIViewController {
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 0
-                    winArray[7] = "X"
+                    winArray[7] = 888
                 } else {
                     button8.setTitle("O", for: UIControl.State.normal)
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 1
-                    winArray[7] = "O"
+                    winArray[7] = 999
                 }
             case 9:
             //button9 was pressed
@@ -180,20 +171,30 @@ class ViewController: UIViewController {
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 0
-                    winArray[8] = "X"
+                    winArray[8] = 888
                 } else {
                     button9.setTitle("O", for: UIControl.State.normal)
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 1
-                    winArray[8] = "O"
+                    winArray[8] = 999
                 }
             default:
             // no button pressed
             print("sorry, no button pressed")
         }
         
+        print("winner array so far = \(winArray)")
+        
         checkForWinner()
+        
+        //.. print message if there's a winner or not
+        if winnerFlag == true {
+            print("Awesome! You won!")
+        } else {
+            print("It's a tie! No winner. Try again.")
+        }
+        
     }
     
     
@@ -208,9 +209,9 @@ class ViewController: UIViewController {
         
         winArray.removeAll()
        
-        for i in 1...9 {
+        for i in 0...8 {
             print(i)
-            winArray.append("N")
+            winArray.append(i + 1)
         }
         
         button1.isEnabled = true
@@ -257,11 +258,12 @@ class ViewController: UIViewController {
             button7.backgroundColor = UIColor.lightGray
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.lightGray
-            
-            across1 = winArray[0]
-            print("across1 = \(across1)")
+        
+            let row1Win = button1.currentTitle
+            print("row1Win = \(String(describing: row1Win))")
             winnerFlag = true
-            //.. across second row
+            
+        //.. across second row
         } else if (winArray[3] == winArray[4]) && (winArray[4] == winArray[5]) {
             button1.backgroundColor = UIColor.lightGray
             button2.backgroundColor = UIColor.lightGray
@@ -273,10 +275,11 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.lightGray
             
-            across2 = winArray[3]
-            print("across2 = \(across2)")
+            let row2Win = button4.currentTitle
+            print("row2Win = \(String(describing: row2Win))")
             winnerFlag = true
-            //.. across third row
+            
+        //.. across third row
         } else if (winArray[6] == winArray[7]) && (winArray[7] == winArray[8]) {
             button1.backgroundColor = UIColor.lightGray
             button2.backgroundColor = UIColor.lightGray
@@ -288,10 +291,11 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             
-            across3 = winArray[6]
-            print("across3 = \(across3)")
+            let row3Win = button7.currentTitle
+            print("row3Win = \(String(describing: row3Win))")
             winnerFlag = true
-            //.. down first column
+            
+        //.. down first column
         } else if (winArray[0] == winArray[3]) && (winArray[3] == winArray[6]) {
             button1.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             button2.backgroundColor = UIColor.lightGray
@@ -303,11 +307,14 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.lightGray
             
-            down1 = winArray[0]
-            print("down1 = \(down1)")
+            let col1Win = button1.currentTitle
+            print("col1Win = \(String(describing: col1Win))")
             winnerFlag = true
-            //.. down second column
+            
+        //.. down second column
         } else if (winArray[1] == winArray[4]) && (winArray[4] == winArray[7]) {
+            
+            print("winArray = \(winArray)")
             button1.backgroundColor = UIColor.lightGray
             button2.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             button3.backgroundColor = UIColor.lightGray
@@ -318,10 +325,11 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             button9.backgroundColor = UIColor.lightGray
             
-            down2 = winArray[1]
-            print("down2 = \(down2)")
+            let col2Win = button2.currentTitle
+            print("col2Win = \(String(describing: col2Win))")
             winnerFlag = true
-            //.. down third column
+            
+        //.. down third column
         } else if (winArray[2] == winArray[5]) && (winArray[5] == winArray[8]) {
             button1.backgroundColor = UIColor.lightGray
             button2.backgroundColor = UIColor.lightGray
@@ -333,10 +341,11 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             
-            down3 = winArray[2]
-            print("down3 = \(down3)")
+            let col3Win = button3.currentTitle
+            print("col3Win = \(String(describing: col3Win))")
             winnerFlag = true
-            //.. diagonal from top left corner
+            
+        //.. diagonal from top left corner
         } else if (winArray[0] == winArray[4]) && (winArray[4] == winArray[8]) {
             button1.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             button2.backgroundColor = UIColor.lightGray
@@ -348,10 +357,11 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
             
-            diagFromLeftCorner = winArray[0]
-            print("diagonal from left corner = \(diagFromLeftCorner)")
+            let diagFromLeftWin = button1.currentTitle
+            print("diagFromLeftWin = \(String(describing: diagFromLeftWin))")
             winnerFlag = true
-            //.. diagonal from top right corner
+            
+        //.. diagonal from top right corner
         } else if (winArray[2] == winArray[4]) && (winArray[4] == winArray[6]) {
             button2.backgroundColor = UIColor.lightGray
             button1.backgroundColor = UIColor.lightGray
@@ -363,13 +373,26 @@ class ViewController: UIViewController {
             button8.backgroundColor = UIColor.lightGray
             button9.backgroundColor = UIColor.lightGray
             
-            diagFromRightCorner = winArray[2]
-            print("diagonal from right corner = \(diagFromRightCorner)")
+            let diagFromRightWin = button3.currentTitle
+            print("diagFromRightWin = \(String(describing: diagFromRightWin))")
             winnerFlag = true
         } else {
             winnerFlag = false
-            print("It's a tie! No winner. Try again.")
         }
+        
+        if winnerFlag == true {
+            button1.isEnabled = false
+            button2.isEnabled = false
+            button3.isEnabled = false
+            button4.isEnabled = false
+            button5.isEnabled = false
+            button6.isEnabled = false
+            button7.isEnabled = false
+            button8.isEnabled = false
+            button9.isEnabled = false
+        }
+        
+        
     }
     
 }
