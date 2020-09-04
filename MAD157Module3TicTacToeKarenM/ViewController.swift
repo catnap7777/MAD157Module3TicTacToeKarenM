@@ -23,6 +23,8 @@ class ViewController: UIViewController {
     @IBOutlet var myView: UIView!
     @IBOutlet var resetButton: UIButton!
     
+    @IBOutlet var gameEndMessage: UILabel!
+    
     var activePlayer = 1
     var x = "X"
     var y = "O"
@@ -32,11 +34,15 @@ class ViewController: UIViewController {
     var index: Int = 0
  
     var winnerFlag: Bool = false
+    var buttonsPressed: Int = 0
    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "confetti.png")!)
+        //self.view.backgroundColor = UIColor(patternImage: UIImage(named: "confetti.png")!)
+        //self.view.backgroundColor = UIColor.yellow
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "tttSketchPlainSm.JPG")!)
+       
     }
 
     @IBAction func buttonClicked(_ sender: UIButton) {
@@ -51,12 +57,14 @@ class ViewController: UIViewController {
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[0] = 888
                 } else {
                     button1.setTitle("O", for: UIControl.State.normal)
                     button1.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button1.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[0] = 999
                 }
             case 2:
@@ -66,12 +74,14 @@ class ViewController: UIViewController {
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[1] = 888
                 } else {
                     button2.setTitle("O", for: UIControl.State.normal)
                     button2.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button2.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[1] = 999
                 }
             case 3:
@@ -81,12 +91,14 @@ class ViewController: UIViewController {
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[2] = 888
                 } else {
                     button3.setTitle("O", for: UIControl.State.normal)
                     button3.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button3.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[2] = 999
                 }
             case 4:
@@ -96,12 +108,14 @@ class ViewController: UIViewController {
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[3] = 888
                 } else {
                     button4.setTitle("O", for: UIControl.State.normal)
                     button4.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button4.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[3] = 999
                 }
             case 5:
@@ -111,12 +125,14 @@ class ViewController: UIViewController {
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[4] = 888
                 } else {
                     button5.setTitle("O", for: UIControl.State.normal)
                     button5.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button5.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[4] = 999
                 }
             case 6:
@@ -126,12 +142,14 @@ class ViewController: UIViewController {
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[5] = 888
                 } else {
                     button6.setTitle("O", for: UIControl.State.normal)
                     button6.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button6.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[5] = 999
                 }
             case 7:
@@ -141,12 +159,14 @@ class ViewController: UIViewController {
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[6] = 888
                 } else {
                     button7.setTitle("O", for: UIControl.State.normal)
                     button7.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button7.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[6] = 999
                 }
             case 8:
@@ -156,12 +176,14 @@ class ViewController: UIViewController {
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[7] = 888
                 } else {
                     button8.setTitle("O", for: UIControl.State.normal)
                     button8.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button8.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[7] = 999
                 }
             case 9:
@@ -171,12 +193,14 @@ class ViewController: UIViewController {
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 0
+                    buttonsPressed = buttonsPressed + 1
                     winArray[8] = 888
                 } else {
                     button9.setTitle("O", for: UIControl.State.normal)
                     button9.backgroundColor = UIColor.init(red: 0, green: 25, blue: 25, alpha: 50)
                     button9.isEnabled = false
                     activePlayer = 1
+                    buttonsPressed = buttonsPressed + 1
                     winArray[8] = 999
                 }
             default:
@@ -188,13 +212,6 @@ class ViewController: UIViewController {
         
         checkForWinner()
         
-        //.. print message if there's a winner or not
-        if winnerFlag == true {
-            print("Awesome! You won!")
-        } else {
-            print("It's a tie! No winner. Try again.")
-        }
-        
     }
     
     
@@ -202,6 +219,11 @@ class ViewController: UIViewController {
         
         activePlayer = 1
         winnerFlag = false
+        buttonsPressed = 0
+        gameEndMessage.text = ""
+        gameEndMessage.backgroundColor = UIColor.clear
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "tttSketchPlainSm.JPG")!)
         
         for (k,v) in winArray.enumerated() {
             print("index \(k): value \(v)")
@@ -224,15 +246,15 @@ class ViewController: UIViewController {
         button8.isEnabled = true
         button9.isEnabled = true
         
-        button1.backgroundColor = UIColor.lightGray
-        button2.backgroundColor = UIColor.lightGray
-        button3.backgroundColor = UIColor.lightGray
-        button4.backgroundColor = UIColor.lightGray
-        button5.backgroundColor = UIColor.lightGray
-        button6.backgroundColor = UIColor.lightGray
-        button7.backgroundColor = UIColor.lightGray
-        button8.backgroundColor = UIColor.lightGray
-        button9.backgroundColor = UIColor.lightGray
+        button1.backgroundColor = UIColor.gray
+        button2.backgroundColor = UIColor.gray
+        button3.backgroundColor = UIColor.gray
+        button4.backgroundColor = UIColor.gray
+        button5.backgroundColor = UIColor.gray
+        button6.backgroundColor = UIColor.gray
+        button7.backgroundColor = UIColor.gray
+        button8.backgroundColor = UIColor.gray
+        button9.backgroundColor = UIColor.gray
         
         button1.setTitle("", for: UIControl.State.normal)
         button2.setTitle("", for: UIControl.State.normal)
@@ -390,8 +412,17 @@ class ViewController: UIViewController {
             button7.isEnabled = false
             button8.isEnabled = false
             button9.isEnabled = false
+            gameEndMessage.text = "Awesome! You won!"
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "confetti.png")!)
         }
         
+        if winnerFlag == false && buttonsPressed == 9 {
+            gameEndMessage.text = "It's a tie! No winner. Try again."
+            gameEndMessage.backgroundColor = UIColor.white
+            self.view.backgroundColor = UIColor(patternImage: UIImage(named: "tryAgainLtSm2.JPG")!)
+            }
+        
+    
         
     }
     
