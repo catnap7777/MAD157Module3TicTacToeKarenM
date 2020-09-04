@@ -36,6 +36,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jra-SK-z8O"/>
                                                 </connections>
@@ -44,6 +47,9 @@
                                                 <rect key="frame" x="55" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bj5-Tb-JTJ"/>
                                                 </connections>
@@ -52,6 +58,9 @@
                                                 <rect key="frame" x="110" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vRE-9U-ZfS"/>
                                                 </connections>
@@ -65,6 +74,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8j-aZ-YcX"/>
                                                 </connections>
@@ -73,6 +85,9 @@
                                                 <rect key="frame" x="55" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBD-ts-SCc"/>
                                                 </connections>
@@ -81,6 +96,9 @@
                                                 <rect key="frame" x="110" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tdh-de-jth"/>
                                                 </connections>
@@ -94,6 +112,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DRJ-dt-1GI"/>
                                                 </connections>
@@ -102,6 +123,9 @@
                                                 <rect key="frame" x="55" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hY-oe-bXq"/>
                                                 </connections>
@@ -110,6 +134,9 @@
                                                 <rect key="frame" x="110" y="0.0" width="30" height="42"/>
                                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                </state>
                                                 <connections>
                                                     <action selector="buttonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uSL-q4-RPn"/>
                                                 </connections>

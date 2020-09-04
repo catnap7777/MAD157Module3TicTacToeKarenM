@@ -51,56 +51,7 @@ class ViewController: UIViewController {
     @IBAction func buttonClicked(_ sender: UIButton) {
         
         index = sender.tag
-        
-        //.. across first row
-        if (winArray[0] == winArray[1]) && (winArray[1] == winArray[2]) {
-            button1.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
-            button2.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
-            button3.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
-            across1 = winArray[0]
-            print("across1 = \(across1)")
-            winnerFlag = true
-        //.. across second row
-        } else if (winArray[3] == winArray[4]) && (winArray[4] == winArray[5]) {
-            across2 = winArray[3]
-            print("across2 = \(across2)")
-            winnerFlag = true
-        //.. across third row
-        } else if (winArray[6] == winArray[7]) && (winArray[7] == winArray[8]) {
-            across3 = winArray[6]
-            print("across3 = \(across3)")
-            winnerFlag = true
-        //.. down first column
-        } else if (winArray[0] == winArray[3]) && (winArray[3] == winArray[6]) {
-            down1 = winArray[0]
-            print("down1 = \(down1)")
-            winnerFlag = true
-        //.. down second column
-        } else if (winArray[1] == winArray[4]) && (winArray[4] == winArray[7]) {
-            down2 = winArray[1]
-            print("down2 = \(down2)")
-            winnerFlag = true
-        //.. down third column
-        } else if (winArray[2] == winArray[5]) && (winArray[5] == winArray[8]) {
-            down3 = winArray[2]
-            print("down3 = \(down3)")
-            winnerFlag = true
-        //.. diagonal from top left corner
-        } else if (winArray[0] == winArray[4]) && (winArray[4] == winArray[8]) {
-            diagFromLeftCorner = winArray[0]
-            print("diagonal from left corner = \(diagFromLeftCorner)")
-            winnerFlag = true
-        //.. diagonal from top right corner
-        } else if (winArray[2] == winArray[4]) && (winArray[4] == winArray[6]) {
-            diagFromRightCorner = winArray[2]
-            print("diagonal from right corner = \(diagFromRightCorner)")
-            winnerFlag = true
-        } else {
-            winnerFlag = false
-            print("It's a tie! No winner. Try again.")
-        }
-            
-        
+       
         switch index {
             case 1:
             //button1 was pressed
@@ -241,6 +192,8 @@ class ViewController: UIViewController {
             // no button pressed
             print("sorry, no button pressed")
         }
+        
+        checkForWinner()
     }
     
     
@@ -290,6 +243,133 @@ class ViewController: UIViewController {
         button8.setTitle("", for: UIControl.State.normal)
         button9.setTitle("", for: UIControl.State.normal)
         
+    }
+    
+    func checkForWinner() {
+        //.. across first row
+        if (winArray[0] == winArray[1]) && (winArray[1] == winArray[2]) {
+            button1.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button2.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button3.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.lightGray
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.lightGray
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.lightGray
+            
+            across1 = winArray[0]
+            print("across1 = \(across1)")
+            winnerFlag = true
+            //.. across second row
+        } else if (winArray[3] == winArray[4]) && (winArray[4] == winArray[5]) {
+            button1.backgroundColor = UIColor.lightGray
+            button2.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.lightGray
+            button4.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button5.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button6.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button7.backgroundColor = UIColor.lightGray
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.lightGray
+            
+            across2 = winArray[3]
+            print("across2 = \(across2)")
+            winnerFlag = true
+            //.. across third row
+        } else if (winArray[6] == winArray[7]) && (winArray[7] == winArray[8]) {
+            button1.backgroundColor = UIColor.lightGray
+            button2.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.lightGray
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.lightGray
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button8.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            
+            across3 = winArray[6]
+            print("across3 = \(across3)")
+            winnerFlag = true
+            //.. down first column
+        } else if (winArray[0] == winArray[3]) && (winArray[3] == winArray[6]) {
+            button1.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button2.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.lightGray
+            button4.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button5.backgroundColor = UIColor.lightGray
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.lightGray
+            
+            down1 = winArray[0]
+            print("down1 = \(down1)")
+            winnerFlag = true
+            //.. down second column
+        } else if (winArray[1] == winArray[4]) && (winArray[4] == winArray[7]) {
+            button1.backgroundColor = UIColor.lightGray
+            button2.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button3.backgroundColor = UIColor.lightGray
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.lightGray
+            button8.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button9.backgroundColor = UIColor.lightGray
+            
+            down2 = winArray[1]
+            print("down2 = \(down2)")
+            winnerFlag = true
+            //.. down third column
+        } else if (winArray[2] == winArray[5]) && (winArray[5] == winArray[8]) {
+            button1.backgroundColor = UIColor.lightGray
+            button2.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.lightGray
+            button6.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button7.backgroundColor = UIColor.lightGray
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            
+            down3 = winArray[2]
+            print("down3 = \(down3)")
+            winnerFlag = true
+            //.. diagonal from top left corner
+        } else if (winArray[0] == winArray[4]) && (winArray[4] == winArray[8]) {
+            button1.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button2.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.lightGray
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.lightGray
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            
+            diagFromLeftCorner = winArray[0]
+            print("diagonal from left corner = \(diagFromLeftCorner)")
+            winnerFlag = true
+            //.. diagonal from top right corner
+        } else if (winArray[2] == winArray[4]) && (winArray[4] == winArray[6]) {
+            button2.backgroundColor = UIColor.lightGray
+            button1.backgroundColor = UIColor.lightGray
+            button3.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button4.backgroundColor = UIColor.lightGray
+            button5.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button6.backgroundColor = UIColor.lightGray
+            button7.backgroundColor = UIColor.init(red: 25, green: 0, blue: 25, alpha: 50)
+            button8.backgroundColor = UIColor.lightGray
+            button9.backgroundColor = UIColor.lightGray
+            
+            diagFromRightCorner = winArray[2]
+            print("diagonal from right corner = \(diagFromRightCorner)")
+            winnerFlag = true
+        } else {
+            winnerFlag = false
+            print("It's a tie! No winner. Try again.")
+        }
     }
     
 }
