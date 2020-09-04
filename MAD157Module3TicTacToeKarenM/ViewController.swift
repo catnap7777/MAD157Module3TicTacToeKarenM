@@ -31,6 +31,17 @@ class ViewController: UIViewController {
     
     var index: Int = 0
     
+    var across1: String = "W"
+    var across2: String = "W"
+    var across3: String = "W"
+    var down1: String = "W"
+    var down2: String = "W"
+    var down3: String = "W"
+    var diagFromLeftCorner: String = "W"
+    var diagFromRightCorner: String = "W"
+    
+    var winnerFlag: Bool = false
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -40,6 +51,55 @@ class ViewController: UIViewController {
     @IBAction func buttonClicked(_ sender: UIButton) {
         
         index = sender.tag
+        
+        //.. across first row
+        if (winArray[0] == winArray[1]) && (winArray[1] == winArray[2]) {
+            button1.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
+            button2.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
+            button3.backgroundColor = UIColor.init(red: 25, green: 25, blue: 25, alpha: 50)
+            across1 = winArray[0]
+            print("across1 = \(across1)")
+            winnerFlag = true
+        //.. across second row
+        } else if (winArray[3] == winArray[4]) && (winArray[4] == winArray[5]) {
+            across2 = winArray[3]
+            print("across2 = \(across2)")
+            winnerFlag = true
+        //.. across third row
+        } else if (winArray[6] == winArray[7]) && (winArray[7] == winArray[8]) {
+            across3 = winArray[6]
+            print("across3 = \(across3)")
+            winnerFlag = true
+        //.. down first column
+        } else if (winArray[0] == winArray[3]) && (winArray[3] == winArray[6]) {
+            down1 = winArray[0]
+            print("down1 = \(down1)")
+            winnerFlag = true
+        //.. down second column
+        } else if (winArray[1] == winArray[4]) && (winArray[4] == winArray[7]) {
+            down2 = winArray[1]
+            print("down2 = \(down2)")
+            winnerFlag = true
+        //.. down third column
+        } else if (winArray[2] == winArray[5]) && (winArray[5] == winArray[8]) {
+            down3 = winArray[2]
+            print("down3 = \(down3)")
+            winnerFlag = true
+        //.. diagonal from top left corner
+        } else if (winArray[0] == winArray[4]) && (winArray[4] == winArray[8]) {
+            diagFromLeftCorner = winArray[0]
+            print("diagonal from left corner = \(diagFromLeftCorner)")
+            winnerFlag = true
+        //.. diagonal from top right corner
+        } else if (winArray[2] == winArray[4]) && (winArray[4] == winArray[6]) {
+            diagFromRightCorner = winArray[2]
+            print("diagonal from right corner = \(diagFromRightCorner)")
+            winnerFlag = true
+        } else {
+            winnerFlag = false
+            print("It's a tie! No winner. Try again.")
+        }
+            
         
         switch index {
             case 1:
@@ -187,6 +247,7 @@ class ViewController: UIViewController {
     @IBAction func resetGameBoard(_ sender: UIButton) {
         
         activePlayer = 1
+        winnerFlag = false
         
         for (k,v) in winArray.enumerated() {
             print("index \(k): value \(v)")
